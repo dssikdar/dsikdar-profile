@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Diptanshu Sikdar is a Computer Science Ph.D. student at UC San Diego advised by Prof. Lianhui Qin."
+      content="Diptanshu Sikdar is a Computer Science Ph.D. student at UC San Diego advised by Prof. Lianhui Qin, working on constrained reasoning for AI for Science."
     />
     <title>Diptanshu Sikdar | Academic Profile</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,500;0,600;0,700;1,500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="professional.css" />
@@ -53,6 +56,7 @@
             <button type="button" class="tab-button is-active" data-tab="about">About</button>
             <button type="button" class="tab-button" data-tab="news">News</button>
             <button type="button" class="tab-button" data-tab="publications">Publications</button>
+            <button type="button" class="tab-button" data-tab="blog">Blog</button>
             <button type="button" class="tab-button" data-tab="cv">CV</button>
           </nav>
         </header>
@@ -64,14 +68,15 @@
             <p>
               I am a Computer Science Ph.D. student at
               <a href="https://cse.ucsd.edu/">UC San Diego</a>, advised by
-              <a href="https://lianhui.ucsd.edu/">Prof. Lianhui Qin</a>. I am interested in machine
-              learning methods for biological data, especially settings where images, gene expression,
-              spatial information, and text need to be considered together.
+              <a href="https://lianhui.ucsd.edu/">Prof. Lianhui Qin</a>. My research focuses on
+              constrained reasoning at both the model and agentic levels: how models and AI agents
+              can reason reliably when their outputs have to respect physical, biological, and
+              experimental constraints.
             </p>
             <p>
-              My recent work has involved histopathology images, single-cell and spatial
-              transcriptomics, and multimodal generative models. I try to build tools that are useful
-              for analyzing biological structure while staying close to the underlying data.
+              I am currently involved in three AI for Science projects spanning geophysics and cell
+              biology. Earlier, my work involved histopathology images, single-cell and spatial
+              transcriptomics, and multimodal generative models.
             </p>
             <p>
               Before UCSD, I completed my B.S. in Computer Science with a specialization in
@@ -100,25 +105,207 @@
             </article>
           </div>
 
-          <h3>Research Areas</h3>
-          <div class="interest-list">
-            <article>
-              <h4>Multimodal Reasoning</h4>
-              <p>Studying models that can combine text, images, structured data, and scientific context.</p>
-            </article>
-            <article>
-              <h4>Generative Modeling</h4>
-              <p>Exploring generative models for simulation, prediction, and representation learning.</p>
-            </article>
-            <article>
-              <h4>Efficient AI Architectures</h4>
-              <p>Interested in scalable models that are practical to train, adapt, and evaluate.</p>
-            </article>
-            <article>
-              <h4>AI for Scientific Discovery</h4>
-              <p>Applying machine learning to scientific problems where data and mechanisms interact.</p>
-            </article>
-          </div>
+          <section class="directions" aria-labelledby="directions-title">
+            <div class="section-head reveal">
+              <h3 id="directions-title">Research Directions</h3>
+              <p>Constrained reasoning at two levels, applied to scientific discovery.</p>
+            </div>
+
+            <div class="levels">
+              <article class="level reveal">
+                <span class="level-index">Level 01</span>
+                <h4>Model-level reasoning</h4>
+                <p>
+                  Models whose predictions stay consistent with known structure: physical laws,
+                  biological mechanisms, and the spatial and temporal organization of the data.
+                </p>
+              </article>
+              <div class="level-link" aria-hidden="true"><span></span></div>
+              <article class="level reveal" style="--i: 1">
+                <span class="level-index">Level 02</span>
+                <h4>Agentic reasoning</h4>
+                <p>
+                  Agent systems that ask questions, form hypotheses, and explore complex scientific
+                  problems systematically within explicit constraints.
+                </p>
+              </article>
+            </div>
+
+            <p class="explorer-label reveal">AI for Science Projects</p>
+
+            <div class="project-explorer reveal" data-explorer>
+              <div class="project-tabs" role="tablist" aria-label="AI for Science projects">
+                <button type="button" class="project-tab is-active" role="tab" id="tab-mastrs" aria-controls="proj-mastrs" aria-selected="true">
+                  <span class="project-num">01</span>
+                  <span class="project-acronym">MASTRS</span>
+                  <span class="project-domain">Geophysics</span>
+                </button>
+                <button type="button" class="project-tab" role="tab" id="tab-chronobench" aria-controls="proj-chronobench" aria-selected="false" tabindex="-1">
+                  <span class="project-num">02</span>
+                  <span class="project-acronym">ChronoBench</span>
+                  <span class="project-domain">Cell dynamics</span>
+                </button>
+                <button type="button" class="project-tab" role="tab" id="tab-spice" aria-controls="proj-spice" aria-selected="false" tabindex="-1">
+                  <span class="project-num">03</span>
+                  <span class="project-acronym">SPICE</span>
+                  <span class="project-domain">Spatial biology</span>
+                </button>
+              </div>
+
+              <div class="project-stage" data-stage>
+                <article class="project-panel is-active" role="tabpanel" id="proj-mastrs" aria-labelledby="tab-mastrs">
+                  <div class="project-visual">
+                    <svg class="viz viz-agents" viewBox="0 0 320 150" role="img" aria-label="Several reasoning agents exchanging messages around a central scientific question">
+                      <path class="edge-ring" d="M64 34 H256 V116 H64 Z" />
+                      <line class="edge" x1="160" y1="75" x2="64" y2="34" />
+                      <line class="edge" x1="160" y1="75" x2="256" y2="34" />
+                      <line class="edge" x1="160" y1="75" x2="64" y2="116" />
+                      <line class="edge" x1="160" y1="75" x2="256" y2="116" />
+                      <line class="flow" x1="160" y1="75" x2="64" y2="34" />
+                      <line class="flow is-reverse" x1="160" y1="75" x2="256" y2="34" />
+                      <line class="flow is-reverse" x1="160" y1="75" x2="64" y2="116" />
+                      <line class="flow" x1="160" y1="75" x2="256" y2="116" />
+                      <circle class="hub-pulse" cx="160" cy="75" r="18" />
+                      <circle class="hub" cx="160" cy="75" r="18" />
+                      <text class="hub-label" x="160" y="81">?</text>
+                      <circle class="agent" cx="64" cy="34" r="11" />
+                      <circle class="agent" cx="256" cy="34" r="11" style="--d: 0.6s" />
+                      <circle class="agent" cx="64" cy="116" r="11" style="--d: 1.2s" />
+                      <circle class="agent" cx="256" cy="116" r="11" style="--d: 1.8s" />
+                      <text class="viz-label" x="64" y="15">Question</text>
+                      <text class="viz-label" x="256" y="15">Hypothesize</text>
+                      <text class="viz-label" x="64" y="145">Explore</text>
+                      <text class="viz-label" x="256" y="145">Critique</text>
+                    </svg>
+                  </div>
+                  <div class="project-body">
+                    <ul class="project-tags" aria-label="Tags">
+                      <li class="is-level">Agentic reasoning</li>
+                      <li>Geophysics</li>
+                      <li>MAESTRO initiative</li>
+                    </ul>
+                    <h4>Multi-Agent ScienTific Reasoning System</h4>
+                    <p>
+                      An AI-driven framework designed to accelerate scientific discovery by fostering
+                      deeper reasoning, asking meaningful questions, and systematically exploring
+                      complex scientific problems. Developed for the Geophysics MAESTRO initiative.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="project-panel" role="tabpanel" id="proj-chronobench" aria-labelledby="tab-chronobench">
+                  <div class="project-visual">
+                    <svg class="viz viz-time" viewBox="0 0 320 150" role="img" aria-label="Gene expression trajectories measured at minute-scale time points">
+                      <line class="axis" x1="24" y1="122" x2="300" y2="122" />
+                      <g class="ticks">
+                        <line x1="24" y1="122" x2="24" y2="127" />
+                        <line x1="79" y1="122" x2="79" y2="127" />
+                        <line x1="134" y1="122" x2="134" y2="127" />
+                        <line x1="189" y1="122" x2="189" y2="127" />
+                        <line x1="244" y1="122" x2="244" y2="127" />
+                        <line x1="299" y1="122" x2="299" y2="127" />
+                      </g>
+                      <text class="viz-label" x="24" y="141">0</text>
+                      <text class="viz-label" x="79" y="141">5</text>
+                      <text class="viz-label" x="134" y="141">10</text>
+                      <text class="viz-label" x="189" y="141">15</text>
+                      <text class="viz-label" x="244" y="141">20</text>
+                      <text class="viz-label" x="299" y="141">min</text>
+                      <path class="trace trace-a" pathLength="1" d="M24 100 C70 98, 90 40, 134 44 S220 70, 300 60" />
+                      <path class="trace trace-b" pathLength="1" d="M24 96 C60 96, 100 92, 134 80 S200 30, 300 28" />
+                      <path class="trace trace-c" pathLength="1" d="M24 104 C80 104, 120 108, 160 100 S240 84, 300 92" />
+                      <g class="scan">
+                        <line x1="24" y1="12" x2="24" y2="122" />
+                        <circle cx="24" cy="12" r="3" />
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="project-body">
+                    <ul class="project-tags" aria-label="Tags">
+                      <li class="is-level">Benchmark</li>
+                      <li>Single-cell dynamics</li>
+                      <li>Virtual cells</li>
+                      <li class="is-status">Planned</li>
+                    </ul>
+                    <h4>ChronoBench</h4>
+                    <p>
+                      A planned resource and reproducible benchmark built around ChronoSeq
+                      perturbation time courses.
+                    </p>
+                    <blockquote class="project-question">
+                      What does minute-scale single-cell data reveal about cellular responses, and how
+                      can these measurements support the development and evaluation of dynamic
+                      virtual-cell models?
+                    </blockquote>
+                  </div>
+                </article>
+
+                <article class="project-panel" role="tabpanel" id="proj-spice" aria-labelledby="tab-spice">
+                  <div class="project-visual">
+                    <svg class="viz viz-cells" viewBox="0 0 320 150" role="img" aria-label="A genetic perturbation in one cell propagating to neighboring cells in tissue">
+                      <circle class="ripple" cx="163" cy="92" r="10" />
+                      <circle class="ripple" cx="163" cy="92" r="10" style="--d: 1.5s" />
+                      <circle class="cell" cx="27" cy="24" r="10" style="--d: 1.38s" />
+                      <circle class="cell" cx="61" cy="24" r="10" style="--d: 1.11s" />
+                      <circle class="cell" cx="95" cy="24" r="10" style="--d: 0.87s" />
+                      <circle class="cell" cx="129" cy="24" r="10" style="--d: 0.69s" />
+                      <circle class="cell" cx="163" cy="24" r="10" style="--d: 0.62s" />
+                      <circle class="cell" cx="197" cy="24" r="10" style="--d: 0.69s" />
+                      <circle class="cell" cx="231" cy="24" r="10" style="--d: 0.87s" />
+                      <circle class="cell" cx="265" cy="24" r="10" style="--d: 1.11s" />
+                      <circle class="cell" cx="299" cy="24" r="10" style="--d: 1.38s" />
+                      <circle class="cell" cx="44" cy="58" r="10" style="--d: 1.13s" />
+                      <circle class="cell" cx="78" cy="58" r="10" style="--d: 0.83s" />
+                      <circle class="cell" cx="112" cy="58" r="10" style="--d: 0.56s" />
+                      <circle class="cell" cx="146" cy="58" r="10" style="--d: 0.35s" />
+                      <circle class="cell" cx="180" cy="58" r="10" style="--d: 0.35s" />
+                      <circle class="cell" cx="214" cy="58" r="10" style="--d: 0.56s" />
+                      <circle class="cell" cx="248" cy="58" r="10" style="--d: 0.83s" />
+                      <circle class="cell" cx="282" cy="58" r="10" style="--d: 1.13s" />
+                      <circle class="cell" cx="27" cy="92" r="10" style="--d: 1.24s" />
+                      <circle class="cell" cx="61" cy="92" r="10" style="--d: 0.93s" />
+                      <circle class="cell" cx="95" cy="92" r="10" style="--d: 0.62s" />
+                      <circle class="cell" cx="129" cy="92" r="10" style="--d: 0.31s" />
+                      <circle class="cell" cx="197" cy="92" r="10" style="--d: 0.31s" />
+                      <circle class="cell" cx="231" cy="92" r="10" style="--d: 0.62s" />
+                      <circle class="cell" cx="265" cy="92" r="10" style="--d: 0.93s" />
+                      <circle class="cell" cx="299" cy="92" r="10" style="--d: 1.24s" />
+                      <circle class="cell" cx="44" cy="126" r="10" style="--d: 1.13s" />
+                      <circle class="cell" cx="78" cy="126" r="10" style="--d: 0.83s" />
+                      <circle class="cell" cx="112" cy="126" r="10" style="--d: 0.56s" />
+                      <circle class="cell" cx="146" cy="126" r="10" style="--d: 0.35s" />
+                      <circle class="cell" cx="180" cy="126" r="10" style="--d: 0.35s" />
+                      <circle class="cell" cx="214" cy="126" r="10" style="--d: 0.56s" />
+                      <circle class="cell" cx="248" cy="126" r="10" style="--d: 0.83s" />
+                      <circle class="cell" cx="282" cy="126" r="10" style="--d: 1.13s" />
+                      <circle class="cell is-perturbed" cx="163" cy="92" r="11" />
+                    </svg>
+                  </div>
+                  <div class="project-body">
+                    <ul class="project-tags" aria-label="Tags">
+                      <li class="is-level">Model-level reasoning</li>
+                      <li>Spatial transcriptomics</li>
+                      <li>Cell-cell communication</li>
+                    </ul>
+                    <h4>Spatial Perturbation-Induced Communication Evolution</h4>
+                    <p>
+                      A perturbation-aware cell-cell communication world model that bridges spatial
+                      transcriptomics (ST) and cell-cell communication (CCC) through a
+                      graph-conditioned flow-matching model. Its novelty lies in jointly learning the
+                      highly dynamic nature of cells alongside genetic perturbations, and in modeling
+                      how their effects propagate across neighboring cells.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="project-pager" aria-hidden="true">
+                <button type="button" class="pager-button" data-step="-1" tabindex="-1" aria-label="Previous project">&#8592;</button>
+                <span class="pager-dots"><i class="is-active"></i><i></i><i></i></span>
+                <button type="button" class="pager-button" data-step="1" tabindex="-1" aria-label="Next project">&#8594;</button>
+              </div>
+            </div>
+          </section>
         </section>
 
         <section id="news" class="tab-panel" data-panel="news" hidden>
@@ -126,8 +313,19 @@
           <h2>Recent Updates</h2>
           <div class="news-list">
             <article>
+              <time>Oct 2026</time>
+              <p>
+                New blog post:
+                <a href="#blog/ai-for-spatial-biology" data-post-link>From Pixels to Perturbations: A Short Tour of AI for Spatial Biology</a>.
+              </p>
+            </article>
+            <article>
               <time>Sep 2026</time>
-              <p>Will start as a Computer Science Ph.D. student at UC San Diego, advised by Prof. Lianhui Qin.</p>
+              <p>sMMC-22M was accepted to NeurIPS 2026 as a poster, to be presented in Atlanta.</p>
+            </article>
+            <article>
+              <time>Sep 2026</time>
+              <p>Started as a Computer Science Ph.D. student at UC San Diego, advised by Prof. Lianhui Qin.</p>
             </article>
             <article>
               <time>Jun 2026</time>
@@ -191,14 +389,14 @@
               </summary>
               <div class="publication-list">
                 <article class="publication">
+                  <h3>sMMC-22M: A Context-Aware Dataset and Benchmark for Single-Cell Spatial Transcriptomics</h3>
+                  <p class="authors">X. Li, Y. Hu, Z. Duan, X. Wang, S. D. Sun, <strong>D. Sikdar</strong>, Y. Liu, J. Zhang</p>
+                  <p class="venue">NeurIPS 2026, Poster (Atlanta)</p>
+                </article>
+                <article class="publication">
                   <h3>CellFix: Genetic Perturbation Optimization for Therapeutic Target Discovery for Crohn's disease</h3>
                   <p class="authors"><strong>D. Sikdar</strong>, J. Liu, J. Zhang</p>
                   <p class="venue">Poster, UCI UROP Symposium and UCI Project ICS Expo, 2026.</p>
-                </article>
-                <article class="publication">
-                  <h3>sMMC-22M: A Context-Aware Dataset and Benchmark for Single-Cell Spatial Transcriptomics</h3>
-                  <p class="authors">X. Li, Y. Hu, Z. Duan, X. Wang, S. D. Sun, <strong>D. Sikdar</strong>, Y. Liu, J. Zhang</p>
-                  <p class="venue">NeurIPS, submitted, 2026</p>
                 </article>
                 <article class="publication">
                   <h3>BRIDGE: Spatially Aware Bimodal Representation Integration with Hierarchical Graphs for Spatial Transcriptomics Resolution Enhancement</h3>
@@ -250,6 +448,263 @@
           </div>
         </section>
 
+        <section id="blog" class="tab-panel" data-panel="blog" hidden>
+          <div class="post-index" data-post-list>
+            <p class="kicker">Blog</p>
+            <h2>Notes & Essays</h2>
+            <p class="blog-lede">Occasional writing on AI reasoning, AI for Science, and computational biology.</p>
+            <div class="post-list">
+              <a class="post-card" href="#blog/ai-for-spatial-biology" data-post-link>
+                <span class="post-meta"><time datetime="2026-10-29">Oct 29, 2026</time> · 8 min read</span>
+                <strong>From Pixels to Perturbations: A Short Tour of AI for Spatial Biology</strong>
+                <span class="post-excerpt">
+                  Pathology foundation models, spatial transcriptomics, and the first wave of biological
+                  world models: what each one learns, and what is still missing.
+                </span>
+                <span class="post-cta">Read post <span aria-hidden="true">&#8594;</span></span>
+              </a>
+            </div>
+          </div>
+
+          <article class="post" data-post="ai-for-spatial-biology" hidden>
+            <a class="post-back" href="#blog" data-post-link>&#8592; All posts</a>
+            <header class="post-header">
+              <p class="kicker">Survey Notes · AI for Science</p>
+              <h2>From Pixels to Perturbations: A Short Tour of AI for Spatial Biology</h2>
+              <p class="post-dek">
+                Notes from a survey of pathology foundation models, spatial transcriptomics, and the
+                first wave of biological world models.
+              </p>
+              <p class="post-meta"><time datetime="2026-10-29">October 29, 2026</time> · Diptanshu Sikdar · 8 min read</p>
+            </header>
+
+            <div class="post-body">
+              <p>
+                Biology is organized across scales. Molecules interact, cells settle into states, cells
+                arrange themselves into tissues, and tissues determine patient outcomes. If we want AI
+                to be useful here, it has to do three things: <em>understand</em> the principles and
+                constraints that link those scales, <em>model</em> the multiscale, multimodal, and
+                hierarchical structure of biology, and <em>infer</em> what we cannot measure directly,
+                such as gene expression from morphology, cell-cell communication (CCC) from spatial
+                omics, or the mechanisms behind a disease.
+              </p>
+              <p>
+                This post condenses a survey I put together this month on where AI for spatial biology
+                stands. It moves from tissue images, to spatially resolved molecular data, to models
+                that try to simulate how cells respond when we perturb them.
+              </p>
+
+              <h3>Structure is not the whole story</h3>
+              <p>
+                Large models for protein structure and sequence, such as AlphaFold, Evo, and ESM3, are
+                already remarkably capable. But a correct structure does not tell you which target to
+                drug or in which patients to drug it, and therapies still fail because they hit the
+                wrong protein or are tested in the wrong population. Complex diseases rarely reduce to
+                a single gene or protein. They emerge from genetic, cellular, and tissue-level
+                processes that differ across patients. For drug discovery, we need models that
+                understand disease biology at the level of the patient, and that means learning from
+                tissue. Early world models such as OCTO, a multimodal transformer trained on a broad
+                and diverse oncology dataset, point in this direction.
+              </p>
+
+              <h3>Four windows into tissue</h3>
+              <p>
+                Spatial biology offers several complementary measurements, and each makes a different
+                trade-off between scale and molecular detail.
+              </p>
+              <div class="modality-grid">
+                <div class="modality">
+                  <span class="modality-scale">Scale: very high</span>
+                  <strong>H&amp;E staining</strong>
+                  <p>Cell and tissue morphology. Millions of routine clinical slides with strong hierarchical structure, but weak molecular supervision.</p>
+                </div>
+                <div class="modality">
+                  <span class="modality-scale">Scale: high, fragmented</span>
+                  <strong>IHC staining</strong>
+                  <p>Spatially localized protein signal with explicit marker identity. Usually low- or medium-plex, with differing protocols and antibodies.</p>
+                </div>
+                <div class="modality">
+                  <span class="modality-scale">Scale: moderate</span>
+                  <strong>Spatial transcriptomics</strong>
+                  <p>Spatially resolved RNA expression that gives dense molecular supervision. Coverage, resolution, and batch effects vary strongly by platform.</p>
+                </div>
+                <div class="modality">
+                  <span class="modality-scale">Scale: moderate</span>
+                  <strong>Mass spectrometry imaging</strong>
+                  <p>Spatial maps of metabolites, lipids, peptides, and drugs, useful for metabolism and drug response. Small datasets, and molecule identity is not always certain.</p>
+                </div>
+              </div>
+              <p>
+                The pattern is clear: the most abundant data carries the least molecular information,
+                and the most informative data is the smallest and noisiest. Much of the field is about
+                borrowing strength from one modality to compensate for another.
+              </p>
+
+              <h3>Pathology foundation models: from patches to slides</h3>
+              <p>
+                The goal of pathology foundation models is to learn general-purpose representations
+                from large-scale histology. They vary along two axes: whether they learn from images
+                alone or from images paired with text, and whether they operate on patches and regions
+                of interest or on whole-slide images (WSIs).
+              </p>
+              <p>
+                PLIP <a class="cite" href="#ref-1">[1]</a> asked whether pathology discussions shared
+                on the internet could supervise a useful vision-language model. They could, but the
+                text is noisy and the model never sees whole-slide context. CONCH
+                <a class="cite" href="#ref-2">[2]</a> showed that stronger language supervision yields
+                a general model for zero-shot classification, retrieval, segmentation, and captioning,
+                though it still works at the patch level.
+              </p>
+              <p>
+                UNI <a class="cite" href="#ref-3">[3]</a> and Virchow
+                <a class="cite" href="#ref-5">[5]</a> took the image-only route, testing whether
+                scale alone produces a universal morphology encoder. The resulting embeddings are
+                strong and clinically robust, but there is no language and no native slide-level
+                representation. Prov-GigaPath <a class="cite" href="#ref-4">[4]</a> tackled
+                whole-slide context directly, producing contextualized tile and slide embeddings
+                efficiently, with multimodality as a secondary concern. TITAN
+                <a class="cite" href="#ref-6">[6]</a> brings the threads together: a morphology-language
+                model with transferable, zero-shot WSI representations. Its bottlenecks are reliance on
+                synthetic captions and the compute cost of full slides.
+              </p>
+              <p class="post-callout">
+                The arc runs from patches to slides and from pixels to language, but every one of these
+                models stays within histology. None of them sees the molecules.
+              </p>
+
+              <h3>Spatial transcriptomics: from spots to neighborhoods</h3>
+              <p>
+                Spatial transcriptomics (ST) fills that gap by measuring gene expression in place. The
+                relevant foundation models fall into roughly three groups.
+              </p>
+              <p>
+                <strong>Cell and gene language models.</strong> Geneformer
+                <a class="cite" href="#ref-7">[7]</a> is a rank-based transformer that learns gene
+                network topology and regulatory hierarchy without overfitting to absolute expression
+                values. scGPT <a class="cite" href="#ref-10">[10]</a> learns gene-gene interactions
+                and regulatory syntax, with strong results on cell type annotation and integration.
+                CellPLM <a class="cite" href="#ref-9">[9]</a> moves from gene-level to cell-level
+                tokens, which helps with spatial imputation and modeling communication between cells.
+                Nicheformer <a class="cite" href="#ref-15">[15]</a> learns enough about spatial
+                context to predict, zero-shot, where dissociated cells came from.
+              </p>
+              <p>
+                <strong>Paired datasets.</strong> HEST-1k <a class="cite" href="#ref-11">[11]</a> and
+                STimage-1K4M <a class="cite" href="#ref-12">[12]</a> each provide more than a thousand
+                samples pairing histology images with ST profiles. They made the next group possible.
+              </p>
+              <p>
+                <strong>Histology to expression.</strong> BLEEP <a class="cite" href="#ref-8">[8]</a>
+                uses bimodal contrastive learning to generate expression profiles directly from H&amp;E
+                images. STEM <a class="cite" href="#ref-14">[14]</a> treats the task as conditional
+                diffusion, and STFlow <a class="cite" href="#ref-13">[13]</a> uses flow matching over
+                the whole slide to model the joint distribution of gene expression, which captures
+                interactions between cells. MCToGene <a class="cite" href="#ref-16">[16]</a> adds
+                many-body attention with hierarchical coupling to model higher-order multi-cell
+                interactions.
+              </p>
+              <p class="post-callout">
+                Two trends stand out: prediction is becoming generative rather than regressive, and the
+                unit of modeling is moving from independent spots to interacting neighborhoods.
+              </p>
+
+              <h3>Biological world models: from snapshots to dynamics</h3>
+              <p>
+                Most of the models above describe a tissue as it is. World models aim to predict how a
+                biological system evolves, especially under genetic or chemical perturbation. The
+                current examples span a wide range of designs.
+              </p>
+              <ul>
+                <li>
+                  <strong>GeneJEPA</strong> <a class="cite" href="#ref-17">[17]</a> applies the
+                  Joint-Embedding Predictive Architecture to ST, yielding highly transferable cell
+                  embeddings for downstream annotation.
+                </li>
+                <li>
+                  <strong>VCWorld</strong> <a class="cite" href="#ref-18">[18]</a> combines knowledge
+                  graphs, retrieval-augmented generation, and LLM-based causal reasoning to predict
+                  drug-induced expression changes and explain the mechanisms behind them.
+                </li>
+                <li>
+                  <strong>Lingshu-Cell</strong> <a class="cite" href="#ref-19">[19]</a> uses masked
+                  discrete diffusion, classifier-free guidance, and biological priors to generate
+                  transcriptome-wide cell states and simulate responses to genetic and drug
+                  perturbations.
+                </li>
+                <li>
+                  <strong>Quine</strong> <a class="cite" href="#ref-20">[20]</a>, an ongoing effort
+                  from Microsoft, learns jointly across genomic, proteomic, chemical, transcriptomic,
+                  and imaging data, and pairs that model with reasoning agents and automated wet-lab
+                  feedback to predict cell state transitions.
+                </li>
+              </ul>
+              <p>
+                Taken together, these models trace a path from representation, to reasoning, to
+                generation, to closed-loop experimentation.
+              </p>
+
+              <h3>Open questions</h3>
+              <p>A few questions from the survey that I keep returning to:</p>
+              <ul>
+                <li>
+                  <strong>Can we reliably predict molecular state directly from H&amp;E?</strong> If so,
+                  millions of existing slides become molecular data.
+                </li>
+                <li>
+                  <strong>How do perturbations propagate through tissue?</strong> Perturbation models
+                  usually treat cells independently, while CCC models are usually static. Bridging the
+                  two with a perturbation-aware communication world model is the motivation behind
+                  <a href="#about" data-tab-link="about">SPICE</a>.
+                </li>
+                <li>
+                  <strong>Can molecular structure meet spatial expression?</strong> Linking 3D
+                  structures of drugs and proteins with ST profiles could let us simulate a compound's
+                  physical effects in a controlled cellular environment.
+                </li>
+                <li>
+                  <strong>Can cells be modeled as agents?</strong> A decentralized network of
+                  communicating cell agents, acting through ligand-receptor interactions and spatial
+                  diffusion, is one way to make simulations respect the physics and biology of
+                  signaling.
+                </li>
+              </ul>
+              <p>
+                The common thread is constraint. Biology supplies plenty of it: which ligands bind which
+                receptors, how far signals diffuse, how tissue is organized. I think the next
+                generation of models will be judged less by how well they fit data and more by how well
+                their predictions respect these constraints when we ask them about situations they have
+                never seen.
+              </p>
+            </div>
+
+            <footer class="post-references" aria-labelledby="references-title">
+              <h3 id="references-title">References</h3>
+              <ol>
+                <li id="ref-1">PLIP. <em>Nature Medicine</em>, 2023. <a href="https://www.nature.com/articles/s41591-023-02504-3">nature.com/articles/s41591-023-02504-3</a></li>
+                <li id="ref-2">CONCH. <em>Nature Medicine</em>, 2024. <a href="https://www.nature.com/articles/s41591-024-02856-4">nature.com/articles/s41591-024-02856-4</a></li>
+                <li id="ref-3">UNI / UNI2. <em>Nature Medicine</em>, 2024. <a href="https://www.nature.com/articles/s41591-024-02857-3">nature.com/articles/s41591-024-02857-3</a></li>
+                <li id="ref-4">Prov-GigaPath. <em>Nature</em>, 2024. <a href="https://www.nature.com/articles/s41586-024-07441-w">nature.com/articles/s41586-024-07441-w</a></li>
+                <li id="ref-5">Virchow. <em>Nature Medicine</em>, 2024. <a href="https://www.nature.com/articles/s41591-024-03141-0">nature.com/articles/s41591-024-03141-0</a></li>
+                <li id="ref-6">TITAN. <em>Nature Medicine</em>, 2025. <a href="https://www.nature.com/articles/s41591-025-03982-3">nature.com/articles/s41591-025-03982-3</a></li>
+                <li id="ref-7">Geneformer. <em>Nature</em>, 2023. <a href="https://www.nature.com/articles/s41586-023-06139-9">nature.com/articles/s41586-023-06139-9</a></li>
+                <li id="ref-8">BLEEP. <em>NeurIPS</em>, 2023. <a href="https://arxiv.org/abs/2306.01859">arxiv.org/abs/2306.01859</a></li>
+                <li id="ref-9">CellPLM. <em>ICLR</em>, 2024. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/173bcdbd820edbe43284e0941109ada9-Paper-Conference.pdf">proceedings.iclr.cc/paper_files/paper/2024/file/173bcdbd820edbe43284e0941109ada9-Paper-Conference.pdf</a></li>
+                <li id="ref-10">scGPT. <em>Nature Methods</em>, 2024. <a href="https://www.nature.com/articles/s41592-024-02201-0">nature.com/articles/s41592-024-02201-0</a></li>
+                <li id="ref-11">HEST-1k. <em>NeurIPS Datasets and Benchmarks</em>, 2024. <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/60a899cc31f763be0bde781a75e04458-Paper-Datasets_and_Benchmarks_Track.pdf">proceedings.neurips.cc/paper_files/paper/2024/file/60a899cc31f763be0bde781a75e04458-Paper-Datasets_and_Benchmarks_Track.pdf</a></li>
+                <li id="ref-12">STimage-1K4M. arXiv, 2024. <a href="https://arxiv.org/abs/2406.06393">arxiv.org/abs/2406.06393</a></li>
+                <li id="ref-13">STFlow. arXiv, 2025. <a href="https://arxiv.org/abs/2506.05361">arxiv.org/abs/2506.05361</a></li>
+                <li id="ref-14">STEM. OpenReview, 2025. <a href="https://openreview.net/forum?id=FtjLUHyZAO">openreview.net/forum?id=FtjLUHyZAO</a></li>
+                <li id="ref-15">Nicheformer. <em>Nature Methods</em>, 2025. <a href="https://www.nature.com/articles/s41592-025-02814-z">nature.com/articles/s41592-025-02814-z</a></li>
+                <li id="ref-16">MCToGene: Predicting Spatial Transcriptomics from Histology Images via High-Order Multi-Cell Interaction. <em>CVPR</em>, 2026. <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Predicting_Spatial_Transcriptomics_from_Histology_Images_via_High-Order_Multi-Cell_Interaction_CVPR_2026_paper.pdf">openaccess.thecvf.com/content/CVPR2026/papers/Sun_Predicting_Spatial_Transcriptomics_from_Histology_Images_via_High-Order_Multi-Cell_Interaction_CVPR_2026_paper.pdf</a></li>
+                <li id="ref-17">GeneJEPA. bioRxiv, 2025. <a href="https://www.biorxiv.org/content/10.1101/2025.10.14.682378v1">biorxiv.org/content/10.1101/2025.10.14.682378v1</a></li>
+                <li id="ref-18">VCWorld. OpenReview, 2026. <a href="https://openreview.net/pdf?id=hhq89Hs7T3">openreview.net/pdf?id=hhq89Hs7T3</a></li>
+                <li id="ref-19">Lingshu-Cell. arXiv, 2026. <a href="https://arxiv.org/abs/2603.25240">arxiv.org/abs/2603.25240</a></li>
+                <li id="ref-20">Introducing Quine: an AI research system designed for the complexity of biology. Microsoft Research Blog, 2026. <a href="https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/">microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology</a></li>
+              </ol>
+            </footer>
+          </article>
+        </section>
+
         <section id="cv" class="tab-panel" data-panel="cv" hidden>
           <p class="kicker">CV</p>
           <h2>Curriculum Vitae</h2>
@@ -262,7 +717,7 @@
         </section>
 
         <footer class="footer">
-          <p>&copy; 2026 Diptanshu Sikdar. Last updated July 2026.</p>
+          <p>&copy; 2026 Diptanshu Sikdar. Last updated October 2026.</p>
         </footer>
       </main>
     </div>
@@ -270,8 +725,21 @@
     <script>
       const tabButtons = Array.from(document.querySelectorAll("[data-tab]"));
       const panels = Array.from(document.querySelectorAll("[data-panel]"));
+      const posts = Array.from(document.querySelectorAll("[data-post]"));
+      const postList = document.querySelector("[data-post-list]");
 
-      function activateTab(tabName) {
+      function showPost(slug) {
+        let found = false;
+        posts.forEach((post) => {
+          const isActive = post.dataset.post === slug;
+          post.hidden = !isActive;
+          found = found || isActive;
+        });
+        postList.hidden = found;
+        return found;
+      }
+
+      function activateTab(tabName, postSlug = null) {
         tabButtons.forEach((button) => {
           button.classList.toggle("is-active", button.dataset.tab === tabName);
         });
@@ -282,9 +750,25 @@
           panel.hidden = !isActive;
         });
 
-        if (window.location.hash !== `#${tabName}`) {
-          history.replaceState(null, "", `#${tabName}`);
+        const hasPost = tabName === "blog" && showPost(postSlug);
+        const hash = hasPost ? `#blog/${postSlug}` : `#${tabName}`;
+        if (window.location.hash !== hash) {
+          history.replaceState(null, "", hash);
         }
+      }
+
+      function route() {
+        const [tabName, postSlug] = window.location.hash.replace("#", "").split("/");
+        if (panels.some((panel) => panel.dataset.panel === tabName)) {
+          activateTab(tabName, postSlug);
+          return true;
+        }
+        return false;
+      }
+
+      function scrollToTop() {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
       }
 
       tabButtons.forEach((button) => {
@@ -295,6 +779,31 @@
         link.addEventListener("click", (event) => {
           event.preventDefault();
           activateTab(link.dataset.tabLink);
+          scrollToTop();
+        });
+      });
+
+      // Post links push history entries so the browser back button returns to the post list.
+      document.querySelectorAll("[data-post-link]").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          history.pushState(null, "", link.getAttribute("href"));
+          route();
+          scrollToTop();
+        });
+      });
+
+      window.addEventListener("popstate", route);
+
+      // Citations scroll to their reference without changing the tab hash.
+      document.querySelectorAll(".cite").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const target = document.querySelector(link.getAttribute("href"));
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+          target.classList.remove("is-flashed");
+          void target.offsetWidth;
+          target.classList.add("is-flashed");
         });
       });
 
@@ -313,10 +822,96 @@
         }, true);
       });
 
-      const initialTab = window.location.hash.replace("#", "");
-      if (panels.some((panel) => panel.dataset.panel === initialTab)) {
-        activateTab(initialTab);
+      document.querySelectorAll("[data-explorer]").forEach((explorer) => {
+        const tabs = Array.from(explorer.querySelectorAll('[role="tab"]'));
+        const projectPanels = Array.from(explorer.querySelectorAll('[role="tabpanel"]'));
+        const dots = Array.from(explorer.querySelectorAll(".pager-dots i"));
+        const stage = explorer.querySelector("[data-stage]");
+        let current = 0;
+
+        function select(index, focusTab = false) {
+          current = (index + tabs.length) % tabs.length;
+
+          tabs.forEach((tab, i) => {
+            const isActive = i === current;
+            tab.classList.toggle("is-active", isActive);
+            tab.setAttribute("aria-selected", String(isActive));
+            tab.tabIndex = isActive ? 0 : -1;
+            if (isActive && focusTab) {
+              tab.focus();
+            }
+          });
+
+          // Panels before the active one rest to the left and panels after rest to the right,
+          // so switching slides in from the direction of travel.
+          projectPanels.forEach((panel, i) => {
+            const isActive = i === current;
+            panel.classList.toggle("is-active", isActive);
+            panel.classList.toggle("is-before", i < current);
+            panel.inert = !isActive;
+          });
+
+          dots.forEach((dot, i) => dot.classList.toggle("is-active", i === current));
+        }
+
+        tabs.forEach((tab, i) => tab.addEventListener("click", () => select(i)));
+
+        explorer.querySelector('[role="tablist"]').addEventListener("keydown", (event) => {
+          const steps = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
+          if (event.key in steps) {
+            select(current + steps[event.key], true);
+          } else if (event.key === "Home") {
+            select(0, true);
+          } else if (event.key === "End") {
+            select(tabs.length - 1, true);
+          } else {
+            return;
+          }
+          event.preventDefault();
+        });
+
+        explorer.querySelectorAll("[data-step]").forEach((button) => {
+          button.addEventListener("click", () => select(current + Number(button.dataset.step)));
+        });
+
+        let touchStart = null;
+        stage.addEventListener("touchstart", (event) => {
+          const touch = event.changedTouches[0];
+          touchStart = { x: touch.clientX, y: touch.clientY };
+        }, { passive: true });
+
+        stage.addEventListener("touchend", (event) => {
+          if (!touchStart) {
+            return;
+          }
+          const touch = event.changedTouches[0];
+          const dx = touch.clientX - touchStart.x;
+          const dy = touch.clientY - touchStart.y;
+          touchStart = null;
+          if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+            select(current + (dx < 0 ? 1 : -1));
+          }
+        }, { passive: true });
+
+        select(0);
+      });
+
+      const revealItems = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+        revealItems.forEach((item) => observer.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
       }
+
+      route();
     </script>
   </body>
 </html>
