@@ -108,25 +108,28 @@
           <section class="directions" aria-labelledby="directions-title">
             <div class="section-head reveal">
               <h3 id="directions-title">Research Directions</h3>
-              <p>Constrained reasoning at two levels, applied to scientific discovery.</p>
+              <p>Constrained reasoning within and across models, applied to scientific discovery.</p>
             </div>
 
             <div class="levels">
               <article class="level reveal">
                 <span class="level-index">Level 01</span>
-                <h4>Model-level reasoning</h4>
+                <h4>Intra-model reasoning</h4>
                 <p>
-                  Models whose predictions stay consistent with known structure: physical laws,
-                  biological mechanisms, and the spatial and temporal organization of the data.
+                  Complex reasoning inside a single model, where generation follows hard constraints
+                  such as physical laws and biological mechanisms, and soft constraints such as
+                  priors and the spatial and temporal organization of the data, built directly into
+                  generative dynamics like flow matching.
                 </p>
               </article>
               <div class="level-link" aria-hidden="true"><span></span></div>
               <article class="level reveal" style="--i: 1">
                 <span class="level-index">Level 02</span>
-                <h4>Agentic reasoning</h4>
+                <h4>Inter-model reasoning</h4>
                 <p>
-                  Agent systems that ask questions, form hypotheses, and explore complex scientific
-                  problems systematically within explicit constraints.
+                  Reasoning at the agentic level, where multiple models interact as agents to ask
+                  questions, form and critique hypotheses, and explore complex scientific problems
+                  systematically within explicit constraints.
                 </p>
               </article>
             </div>
@@ -135,9 +138,9 @@
 
             <div class="project-explorer reveal" data-explorer>
               <div class="project-tabs" role="tablist" aria-label="AI for Science projects">
-                <button type="button" class="project-tab is-active" role="tab" id="tab-mastrs" aria-controls="proj-mastrs" aria-selected="true">
+                <button type="button" class="project-tab is-active" role="tab" id="tab-masters" aria-controls="proj-masters" aria-selected="true">
                   <span class="project-num">01</span>
-                  <span class="project-acronym">MASTRS</span>
+                  <span class="project-acronym">MASTERS</span>
                   <span class="project-domain">Geophysics</span>
                 </button>
                 <button type="button" class="project-tab" role="tab" id="tab-chronobench" aria-controls="proj-chronobench" aria-selected="false" tabindex="-1">
@@ -153,7 +156,7 @@
               </div>
 
               <div class="project-stage" data-stage>
-                <article class="project-panel is-active" role="tabpanel" id="proj-mastrs" aria-labelledby="tab-mastrs">
+                <article class="project-panel is-active" role="tabpanel" id="proj-masters" aria-labelledby="tab-masters">
                   <div class="project-visual">
                     <svg class="viz viz-agents" viewBox="0 0 320 150" role="img" aria-label="Several reasoning agents exchanging messages around a central scientific question">
                       <path class="edge-ring" d="M64 34 H256 V116 H64 Z" />
@@ -180,11 +183,11 @@
                   </div>
                   <div class="project-body">
                     <ul class="project-tags" aria-label="Tags">
-                      <li class="is-level">Agentic reasoning</li>
+                      <li class="is-level">Inter-model reasoning</li>
                       <li>Geophysics</li>
                       <li>MAESTRO initiative</li>
                     </ul>
-                    <h4>Multi-Agent ScienTific Reasoning System</h4>
+                    <h4>Multi-Agent ScienTific Exploration and Research System</h4>
                     <p>
                       An AI-driven framework designed to accelerate scientific discovery by fostering
                       deeper reasoning, asking meaningful questions, and systematically exploring
@@ -225,7 +228,6 @@
                       <li class="is-level">Benchmark</li>
                       <li>Single-cell dynamics</li>
                       <li>Virtual cells</li>
-                      <li class="is-status">Planned</li>
                     </ul>
                     <h4>ChronoBench</h4>
                     <p>
@@ -283,17 +285,17 @@
                   </div>
                   <div class="project-body">
                     <ul class="project-tags" aria-label="Tags">
-                      <li class="is-level">Model-level reasoning</li>
+                      <li class="is-level">Intra-model reasoning</li>
                       <li>Spatial transcriptomics</li>
                       <li>Cell-cell communication</li>
                     </ul>
                     <h4>Spatial Perturbation-Induced Communication Evolution</h4>
                     <p>
-                      A perturbation-aware cell-cell communication world model that bridges spatial
-                      transcriptomics (ST) and cell-cell communication (CCC) through a
-                      graph-conditioned flow-matching model. Its novelty lies in jointly learning the
-                      highly dynamic nature of cells alongside genetic perturbations, and in modeling
-                      how their effects propagate across neighboring cells.
+                      A world model of tissue: given a genetic perturbation, SPICE simulates how
+                      cells and their communication evolve in space and time by bridging spatial
+                      transcriptomics (ST) and cell-cell communication (CCC) data. Its novelty lies 
+                      in jointly learning the highly dynamic nature of cells alongside genetic 
+                      perturbations, and in modeling how their effects propagate across neighboring cells.
                     </p>
                   </div>
                 </article>
@@ -641,39 +643,6 @@
               <p>
                 Taken together, these models trace a path from representation, to reasoning, to
                 generation, to closed-loop experimentation.
-              </p>
-
-              <h3>Open questions</h3>
-              <p>A few questions from the survey that I keep returning to:</p>
-              <ul>
-                <li>
-                  <strong>Can we reliably predict molecular state directly from H&amp;E?</strong> If so,
-                  millions of existing slides become molecular data.
-                </li>
-                <li>
-                  <strong>How do perturbations propagate through tissue?</strong> Perturbation models
-                  usually treat cells independently, while CCC models are usually static. Bridging the
-                  two with a perturbation-aware communication world model is the motivation behind
-                  <a href="#about" data-tab-link="about">SPICE</a>.
-                </li>
-                <li>
-                  <strong>Can molecular structure meet spatial expression?</strong> Linking 3D
-                  structures of drugs and proteins with ST profiles could let us simulate a compound's
-                  physical effects in a controlled cellular environment.
-                </li>
-                <li>
-                  <strong>Can cells be modeled as agents?</strong> A decentralized network of
-                  communicating cell agents, acting through ligand-receptor interactions and spatial
-                  diffusion, is one way to make simulations respect the physics and biology of
-                  signaling.
-                </li>
-              </ul>
-              <p>
-                The common thread is constraint. Biology supplies plenty of it: which ligands bind which
-                receptors, how far signals diffuse, how tissue is organized. I think the next
-                generation of models will be judged less by how well they fit data and more by how well
-                their predictions respect these constraints when we ask them about situations they have
-                never seen.
               </p>
             </div>
 

@@ -793,21 +793,11 @@ time {
 .project-tags li {
   border: 1px solid var(--line);
   border-radius: 999px;
+  background: var(--surface-alt);
   color: var(--muted);
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.12rem 0.55rem;
-}
-
-.project-tags .is-level {
-  border-color: rgba(11, 111, 104, 0.28);
-  background: var(--accent-soft);
-  color: var(--accent-dark);
-}
-
-.project-tags .is-status {
-  border-color: rgba(169, 79, 52, 0.35);
-  color: var(--warm);
 }
 
 .project-question {
