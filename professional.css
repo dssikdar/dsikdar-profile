@@ -1405,3 +1405,8 @@ time {
     transform: none;
   }
 }
+
+.pub-note {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
